@@ -41,6 +41,7 @@ h6 {
 }
 
 .hamburger-menu {
+  z-index: 99;
   width: 35px;
   height: 30px;
   // background-color: #fff;
@@ -62,10 +63,6 @@ h6 {
   &-2 {
     height: 3px;
   }
-}
-
-.bottom-nav {
-  display: none;
 }
 
 .btn-wrapper {
@@ -120,4 +117,26 @@ h6 {
   &:hover {
     transform: rotateX(30deg) rotateZ(0deg);
   }
+}
+
+.top-nav {
+  z-index: 49;
+  height: 15vh;
+  width: 100%;
+  background: linear-gradient(rgba(34, 111, 122, 0.8), rgba(116, 157, 160, 0.8)),
+    url(https://www.thehackneywick.co.uk/assets/background/bg-flower-1440x814.jpg)
+      no-repeat 50% 0;
+  background-size: cover;
+  position: fixed;
+}
+
+.nav-list {
+  background-color: #ccc;
+  list-style: none;
+  width: 80%;
+  margin: auto;
+  height: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
