@@ -31,6 +31,12 @@ h6 {
   top: 20px;
   left: 50px;
 
+  @media (max-width: 550px) {
+    widht: 70px;
+    height: 70px;
+    left: 30px;
+  }
+
   img {
     width: 100%;
     width: 100%;
@@ -88,6 +94,7 @@ h6 {
   left: 50%;
   transform: translate(-50%, -50%);
   perspective: 1000px;
+  outline: 1px solid transparent;
 }
 
 .banner-btn {
@@ -106,6 +113,24 @@ h6 {
   transform: rotateX(70deg) rotateZ(30deg);
   transform-style: preserve-3d;
   transition: transform 0.5s;
+  outline: 1px solid transparent;
+
+  @media (max-width: 900px) {
+    width: 300px;
+    height: 80px;
+    font-size: 30px;
+  }
+
+  @media (max-width: 550px) {
+    width: 280px;
+    height: 70px;
+    font-size: 25px;
+  }
+
+  @media (max-width: 450px) {
+    width: 260px;
+    height: 60px;
+  }
 
   &::before {
     content: '';
@@ -113,10 +138,11 @@ h6 {
     height: 14px;
     background-color: #749da0;
     position: absolute;
-    bottom: 0;
+    bottom: 1px;
     right: 0;
     transform: rotateX(90deg);
     transform-origin: bottom;
+    outline: 1px solid transparent;
   }
 
   &::after {
@@ -129,10 +155,12 @@ h6 {
     right: 0;
     transform: rotateY(-90deg);
     transform-origin: right;
+    outline: 1px solid transparent;
   }
 
   &:hover {
-    transform: rotateX(30deg) rotateZ(0deg);
+    transform: rotateX(29deg) rotateZ(0deg);
+    outline: 1px solid transparent;
   }
 }
 
@@ -147,6 +175,25 @@ h6 {
   position: fixed;
   top: -15vh; // move up by 15vh which will is the same as the height
   transition: top 0.4s;
+
+  @media (max-width: 1200px) {
+    background-color: rgba(34, 111, 122, 0.8);
+  }
+
+  @media (max-width: 900px) {
+    height: 25vh;
+    top: -25vh;
+  }
+
+  @media (max-width: 550px) {
+    height: 30vh;
+    top: -30vh;
+  }
+
+  @media (max-width: 450px) {
+    height: 35vh;
+    top: -35vh;
+  }
 }
 
 .change .top-nav {
@@ -162,6 +209,24 @@ h6 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  @media (max-width: 1200px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 900px) {
+    width: 70%;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  @media (max-width: 750px) {
+    width: 60%;
+  }
+
+  @media (max-width: 450px) {
+    width: 50%;
+  }
 
   li {
     perspective: 500px;
@@ -182,8 +247,15 @@ h6 {
   transform-style: preserve-3d;
   transition: transform 0.3s;
   display: block;
-
   transform-origin: top;
+
+  @media (max-width: 1200px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 900px) {
+    margin: 3px 0;
+  }
 
   &::after {
     content: attr(data-text);
@@ -199,6 +271,7 @@ h6 {
 
   &:hover {
     transform: rotateX(90deg);
+    outline: 1px solid transparent;
   }
 }
 
@@ -212,6 +285,20 @@ h6 {
   position: fixed;
   bottom: -85vh; // hide nav as per the height
   transition: bottom 0.4s;
+
+  @media (max-width: 900px) {
+    height: 75vh;
+    bottom: -75vh;
+  }
+  @media (max-width: 550px) {
+    height: 70vh;
+    bottom: -70vh;
+  }
+
+  @media (max-width: 450px) {
+    height: 65vh;
+    bottom: -65vh;
+  }
 }
 
 .change .bottom-nav {
@@ -227,6 +314,21 @@ h6 {
   display: flex;
   justify-content: space-between;
   width: 60%;
+
+  @media (max-width: 1600px) {
+    width: 80%;
+  }
+
+  @media (max-width: 1200px) {
+    width: 70%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 900px) {
+    width: 95%;
+  }
 }
 
 .icon-link {
@@ -240,6 +342,28 @@ h6 {
   border-radius: 5px;
   transform-style: preserve-3d;
   transition: transform 0.5s;
+  outline: 1px solid transparent;
+
+  @media (max-width: 1200px) {
+    width: 180px;
+    height: 180px;
+    margin: 20px;
+  }
+
+  @media (max-width: 900px) {
+    width: 140px;
+    height: 140px;
+  }
+
+  @media (max-width: 750px) {
+    width: 120px;
+    height: 120px;
+  }
+
+  @media (max-width: 550px) {
+    width: 110px;
+    height: 110px;
+  }
 
   &::before {
     height: 19px;
@@ -260,10 +384,12 @@ h6 {
 
   &:hover {
     transform: rotateY(35deg);
+    outline: 1px solid transparent;
 
     i {
       transform: rotateY(-70deg);
       text-shadow: 10, 10px, 20px rgba(0, 0, 0, 0.6);
+      outline: 1px solid transparent;
     }
 
     i::after {
@@ -287,6 +413,29 @@ h6 {
     transition: all 0.5s;
     position: relative;
     overflow: hidden;
+    outline: 1px solid transparent;
+
+    @media (max-width: 1200px) {
+      width: 125px;
+      height: 125px;
+      font-size: 40px;
+    }
+
+    @media (max-width: 900px) {
+      width: 90px;
+      height: 90px;
+      font-size: 30px;
+    }
+
+    @media (max-width: 750px) {
+      width: 70px;
+      height: 70px;
+    }
+
+    @media (max-width: 550px) {
+      width: 60px;
+      height: 60px;
+    }
 
     &::after {
       content: '';
