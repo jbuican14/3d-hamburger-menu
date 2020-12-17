@@ -149,7 +149,6 @@ h6 {
 }
 
 .nav-list {
-  background-color: #ccc;
   list-style: none;
   width: 80%;
   margin: auto;
@@ -188,7 +187,6 @@ h6 {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
   display: block;
-  cursor: pointer;
   -webkit-transform-origin: top;
           transform-origin: top;
 }
@@ -201,8 +199,8 @@ h6 {
   background-color: rgba(116, 157, 160, 0.8);
   padding: inherit;
   color: rgba(0, 0, 0, 0.6);
-  -webkit-transform: rotateX(-90deg);
-          transform: rotateX(-90deg);
+  -webkit-transform: rotateX(-89deg);
+          transform: rotateX(-89deg);
   -webkit-transform-origin: top;
           transform-origin: top;
 }

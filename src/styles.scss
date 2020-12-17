@@ -131,7 +131,7 @@ h6 {
 }
 
 .nav-list {
-  background-color: #ccc;
+  // background-color: #ccc;
   list-style: none;
   width: 80%;
   margin: auto;
@@ -159,7 +159,7 @@ h6 {
   transform-style: preserve-3d;
   transition: transform 0.3s;
   display: block;
-  cursor: pointer;
+
   transform-origin: top;
 
   &::after {
@@ -170,7 +170,7 @@ h6 {
     background-color: rgba(116, 157, 160, 0.8);
     padding: inherit;
     color: rgba(0, 0, 0, 0.6);
-    transform: rotateX(-90deg);
+    transform: rotateX(-89deg);
     transform-origin: top;
   }
 
