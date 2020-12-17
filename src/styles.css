@@ -209,4 +209,145 @@ h6 {
   -webkit-transform: rotateX(90deg);
           transform: rotateX(90deg);
 }
+
+.bottom-nav {
+  width: 100%;
+  height: 85vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 111, 122, 0.8)), to(rgba(116, 157, 160, 0.8))), url(https://www.thehackneywick.co.uk/assets/background/bg-flower-1440x814.jpg) no-repeat 50% -16vh;
+  background: linear-gradient(rgba(34, 111, 122, 0.8), rgba(116, 157, 160, 0.8)), url(https://www.thehackneywick.co.uk/assets/background/bg-flower-1440x814.jpg) no-repeat 50% -16vh;
+  background-size: cover;
+  position: fixed;
+  bottom: 0;
+}
+
+.icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+}
+
+.icon-link {
+  width: 200px;
+  height: 200px;
+  border: 8px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.icon-link::before {
+  height: 19px;
+  width: 5px;
+  content: '';
+  background-color: #fff;
+  top: 0;
+  position: absolute;
+}
+
+.icon-link::after {
+  height: 19px;
+  width: 5px;
+  content: '';
+  background-color: #fff;
+  bottom: 0;
+  position: absolute;
+}
+
+.icon-link:hover {
+  -webkit-transform: rotateY(35deg);
+          transform: rotateY(35deg);
+}
+
+.icon-link:hover i {
+  -webkit-transform: rotateY(-70deg);
+          transform: rotateY(-70deg);
+  text-shadow: 10, 10px, 20px rgba(0, 0, 0, 0.6);
+}
+
+.icon-link:hover i::after {
+  top: 0;
+  right: 0;
+  border-radius: 0;
+}
+
+.icon-link i {
+  font-size: 50px;
+  color: #fff;
+  width: 150px;
+  height: 150px;
+  background-color: #555;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid #fff;
+  text-shadow: 0, 10px, 20px rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-link i::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -130%;
+  right: -130%;
+  border-radius: 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.icon-item {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.icon-item:nth-child(1) .icon-link i::after {
+  background-color: #3b5999;
+}
+
+.icon-item:nth-child(2) .icon-link i::after {
+  background-color: #cd201f;
+}
+
+.icon-item:nth-child(3) .icon-link i::after {
+  background-color: #55acee;
+}
+
+.icon-item:nth-child(4) .icon-link i::after {
+  background-color: #dd4b39;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -178,3 +178,117 @@ h6 {
     transform: rotateX(90deg);
   }
 }
+
+.bottom-nav {
+  width: 100%;
+  height: 85vh;
+  background: linear-gradient(rgba(34, 111, 122, 0.8), rgba(116, 157, 160, 0.8)),
+    url(https://www.thehackneywick.co.uk/assets/background/bg-flower-1440x814.jpg)
+      no-repeat 50% -16vh;
+  background-size: cover;
+  position: fixed;
+  bottom: 0;
+}
+
+.icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.icon-link {
+  width: 200px;
+  height: 200px;
+  border: 8px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+
+  &::before {
+    height: 19px;
+    width: 5px;
+    content: '';
+    background-color: #fff;
+    top: 0;
+    position: absolute;
+  }
+  &::after {
+    height: 19px;
+    width: 5px;
+    content: '';
+    background-color: #fff;
+    bottom: 0;
+    position: absolute;
+  }
+
+  &:hover {
+    transform: rotateY(35deg);
+
+    i {
+      transform: rotateY(-70deg);
+      text-shadow: 10, 10px, 20px rgba(0, 0, 0, 0.6);
+    }
+
+    i::after {
+      top: 0;
+      right: 0;
+      border-radius: 0;
+    }
+  }
+
+  i {
+    font-size: 50px;
+    color: #fff;
+    width: 150px;
+    height: 150px;
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #fff;
+    text-shadow: 0, 10px, 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      height: 100%;
+      width: 100%;
+      // background-color: red;
+      position: absolute;
+      top: -130%;
+      right: -130%;
+      border-radius: 100%;
+      transition: all 0.3s;
+      z-index: -1;
+    }
+  }
+}
+
+.icon-item {
+  // li
+  perspective: 1000px;
+
+  &:nth-child(1) .icon-link i::after {
+    background-color: #3b5999;
+  }
+  &:nth-child(2) .icon-link i::after {
+    background-color: #cd201f;
+  }
+  &:nth-child(3) .icon-link i::after {
+    background-color: #55acee;
+  }
+  &:nth-child(4) .icon-link i::after {
+    background-color: #dd4b39;
+  }
+}
