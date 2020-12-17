@@ -139,4 +139,42 @@ h6 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  li {
+    perspective: 500px;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  background-color: rgba(116, 157, 160, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  color: #777;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+  display: block;
+  cursor: pointer;
+  transform-origin: top;
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    background-color: rgba(116, 157, 160, 0.8);
+    padding: inherit;
+    color: rgba(0, 0, 0, 0.6);
+    transform: rotateX(-90deg);
+    transform-origin: top;
+  }
+
+  &:hover {
+    transform: rotateX(90deg);
+  }
 }
