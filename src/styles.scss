@@ -59,10 +59,26 @@ h6 {
   height: 5px;
   background-color: #16c3cf;
   border-radius: 25px;
+  transform-origin: right;
+  transition: transform 0.5s;
 
   &-2 {
     height: 3px;
   }
+}
+
+.change .line-1 {
+  transform: rotateZ(-45deg);
+}
+
+.change .line-2 {
+  height: 3px;
+
+  transform: translate(5px, 20px);
+}
+
+.change .line-3 {
+  transform: rotateZ(45deg);
 }
 
 .btn-wrapper {
