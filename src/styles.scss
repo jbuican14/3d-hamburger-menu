@@ -24,6 +24,7 @@ h6 {
 }
 
 .logo {
+  z-index: 99;
   height: 80px;
   width: 80px;
   position: fixed;
@@ -144,6 +145,12 @@ h6 {
       no-repeat 50% 0;
   background-size: cover;
   position: fixed;
+  top: -15vh; // move up by 15vh which will is the same as the height
+  transition: top 0.4s;
+}
+
+.change .top-nav {
+  top: 0;
 }
 
 .nav-list {
@@ -203,6 +210,11 @@ h6 {
       no-repeat 50% -16vh;
   background-size: cover;
   position: fixed;
+  bottom: -85vh; // hide nav as per the height
+  transition: bottom 0.4s;
+}
+
+.change .bottom-nav {
   bottom: 0;
 }
 
